@@ -216,3 +216,24 @@ h3 {
   color: var(--muted);
   font-size: 14px;
 }
+
+.stack {
+  display: grid;
+  gap: 16px;
+}
+
+.calc {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.calc h1 {
+  font-size: clamp(26px, 5vw, 34px);
+  margin: 8px 0 6px;
+}
+
+.crumb {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
