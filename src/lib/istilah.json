@@ -1,0 +1,314 @@
+{
+ "note": "Dibuat dari glossary.dart aplikasi. Jangan diubah manual.",
+ "groups": [
+  "Slip gaji",
+  "Asuransi & pensiun",
+  "Pajak",
+  "Kerja & lembur",
+  "Bank & pembayaran",
+  "Dokumen & administrasi"
+ ],
+ "terms": [
+  {
+   "japanese": "給与明細",
+   "reading": "kyūyo meisai",
+   "meaning": "Slip gaji",
+   "explanation": "Rincian gaji bulanan: penghasilan (支給), potongan (控除), dan gaji yang diterima (差引支給額).",
+   "group": "Slip gaji"
+  },
+  {
+   "japanese": "給料・給与",
+   "reading": "kyūryō / kyūyo",
+   "meaning": "Gaji",
+   "explanation": "Upah yang dibayar perusahaan, biasanya sebulan sekali.",
+   "group": "Slip gaji"
+  },
+  {
+   "japanese": "基本給",
+   "reading": "kihonkyū",
+   "meaning": "Gaji pokok",
+   "explanation": "Gaji dasar tanpa tunjangan dan lembur. Dipakai sebagai dasar menghitung upah lembur per jam.",
+   "group": "Slip gaji"
+  },
+  {
+   "japanese": "総支給額",
+   "reading": "sō shikyū gaku",
+   "meaning": "Gaji kotor",
+   "explanation": "Jumlah semua penghasilan bulan itu (gaji pokok, tunjangan, lembur) sebelum dipotong.",
+   "group": "Slip gaji"
+  },
+  {
+   "japanese": "控除",
+   "reading": "kōjo",
+   "meaning": "Potongan",
+   "explanation": "Bagian gaji yang dipotong: asuransi sosial, pajak, dan potongan lain seperti sewa asrama.",
+   "group": "Slip gaji"
+  },
+  {
+   "japanese": "手取り",
+   "reading": "tedori",
+   "meaning": "Gaji bersih",
+   "explanation": "Uang yang benar-benar diterima setelah semua potongan. Di slip gaji sering tertulis 差引支給額.",
+   "group": "Slip gaji"
+  },
+  {
+   "japanese": "手当",
+   "reading": "teate",
+   "meaning": "Tunjangan",
+   "explanation": "Tambahan di luar gaji pokok, mis. 住宅手当 (tempat tinggal), 家族手当 (keluarga).",
+   "group": "Slip gaji"
+  },
+  {
+   "japanese": "通勤手当",
+   "reading": "tsūkin teate",
+   "meaning": "Tunjangan transport",
+   "explanation": "Biaya perjalanan ke tempat kerja. Sampai batas tertentu tidak kena pajak, tetapi tetap dihitung untuk iuran asuransi.",
+   "group": "Slip gaji"
+  },
+  {
+   "japanese": "賞与",
+   "reading": "shōyo",
+   "meaning": "Bonus",
+   "explanation": "Bonus, biasanya musim panas dan akhir tahun. Dipotong asuransi dan pajak dengan cara berbeda dari gaji bulanan.",
+   "group": "Slip gaji"
+  },
+  {
+   "japanese": "社会保険",
+   "reading": "shakai hoken",
+   "meaning": "Asuransi sosial",
+   "explanation": "Sebutan umum untuk 健康保険, 厚生年金, 雇用保険, dan 介護保険 yang dipotong dari gaji.",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "健康保険",
+   "reading": "kenkō hoken",
+   "meaning": "Asuransi kesehatan",
+   "explanation": "Asuransi kesehatan karyawan. Biaya berobat jadi 30%. Iurannya dibagi dua antara pekerja dan perusahaan.",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "協会けんぽ",
+   "reading": "kyōkai kenpo",
+   "meaning": "Asosiasi asuransi kesehatan nasional",
+   "explanation": "Penyelenggara 健康保険 untuk banyak perusahaan kecil–menengah. Tarifnya berbeda per prefektur.",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "介護保険",
+   "reading": "kaigo hoken",
+   "meaning": "Asuransi perawatan lansia",
+   "explanation": "Dipotong dari gaji mulai umur 40 sampai 64 tahun.",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "子ども・子育て支援金",
+   "reading": "kodomo kosodate shienkin",
+   "meaning": "Iuran dukungan pengasuhan anak",
+   "explanation": "Iuran baru yang dipungut bersama 健康保険 mulai gaji April 2026.",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "厚生年金",
+   "reading": "kōsei nenkin",
+   "meaning": "Pensiun karyawan",
+   "explanation": "Iuran pensiun karyawan (18,3%, dibagi dua dengan perusahaan). Bisa diklaim sebagian lewat 脱退一時金 setelah pulang.",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "国民年金",
+   "reading": "kokumin nenkin",
+   "meaning": "Pensiun nasional",
+   "explanation": "Pensiun untuk yang tidak ikut 厚生年金, mis. pelajar atau pekerja lepas. Iurannya dibayar sendiri.",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "雇用保険",
+   "reading": "koyō hoken",
+   "meaning": "Asuransi kerja",
+   "explanation": "Asuransi untuk masa menganggur dan pelatihan. Pekerja membayar sekitar 0,5% dari gaji kotor.",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "標準報酬月額",
+   "reading": "hyōjun hōshū getsugaku",
+   "meaning": "Tingkat gaji standar",
+   "explanation": "Gaji yang dibulatkan ke tingkat tabel. Iuran 健康保険 dan 厚生年金 dihitung dari angka ini, biasanya ditetapkan dari rata-rata April–Juni.",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "脱退一時金",
+   "reading": "dattai ichijikin",
+   "meaning": "Uang pengembalian pensiun",
+   "explanation": "Uang dari iuran pensiun yang bisa diklaim orang asing setelah meninggalkan Jepang (paling lambat 2 tahun).",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "ねんきん定期便",
+   "reading": "nenkin teikibin",
+   "meaning": "Laporan pensiun tahunan",
+   "explanation": "Surat dari 日本年金機構 yang berisi riwayat iuran dan lama kepesertaan pensiun.",
+   "group": "Asuransi & pensiun"
+  },
+  {
+   "japanese": "所得税",
+   "reading": "shotokuzei",
+   "meaning": "Pajak penghasilan",
+   "explanation": "Pajak negara yang dipotong dari gaji setiap bulan (源泉徴収), lalu disesuaikan saat 年末調整.",
+   "group": "Pajak"
+  },
+  {
+   "japanese": "住民税",
+   "reading": "jūminzei",
+   "meaning": "Pajak penduduk",
+   "explanation": "Pajak daerah dari penghasilan tahun lalu, dipotong dari gaji Juni sampai Mei. Tahun pertama di Jepang biasanya belum ada.",
+   "group": "Pajak"
+  },
+  {
+   "japanese": "源泉徴収",
+   "reading": "gensen chōshū",
+   "meaning": "Pemotongan pajak oleh perusahaan",
+   "explanation": "Perusahaan memotong pajak dari gaji lalu menyetorkannya ke negara.",
+   "group": "Pajak"
+  },
+  {
+   "japanese": "源泉徴収票",
+   "reading": "gensen chōshūhyō",
+   "meaning": "Bukti potong pajak tahunan",
+   "explanation": "Ringkasan gaji dan pajak setahun dari perusahaan. Dibutuhkan untuk menghitung 住民税 dan untuk 確定申告.",
+   "group": "Pajak"
+  },
+  {
+   "japanese": "年末調整",
+   "reading": "nenmatsu chōsei",
+   "meaning": "Penyesuaian pajak akhir tahun",
+   "explanation": "Perusahaan menghitung ulang pajak setahun di bulan Desember; kelebihan dikembalikan, kekurangan dipotong.",
+   "group": "Pajak"
+  },
+  {
+   "japanese": "確定申告",
+   "reading": "kakutei shinkoku",
+   "meaning": "Pelaporan pajak tahunan",
+   "explanation": "Lapor pajak sendiri (Februari–Maret), mis. jika punya penghasilan lain atau ingin klaim potongan yang tidak diurus perusahaan.",
+   "group": "Pajak"
+  },
+  {
+   "japanese": "扶養控除等申告書",
+   "reading": "fuyō kōjo tō shinkokusho",
+   "meaning": "Formulir tanggungan",
+   "explanation": "Formulir ke perusahaan tentang tanggungan. Tanggungan yang tinggal di luar negeri hanya dihitung jika ada dokumen hubungan keluarga; saat 年末調整 juga perlu bukti kiriman uang.",
+   "group": "Pajak"
+  },
+  {
+   "japanese": "納税管理人",
+   "reading": "nōzei kanrinin",
+   "meaning": "Wakil urusan pajak",
+   "explanation": "Orang di Jepang yang ditunjuk untuk mengurus pajak setelah kamu pulang, mis. untuk meminta kembali pajak 脱退一時金.",
+   "group": "Pajak"
+  },
+  {
+   "japanese": "ふるさと納税",
+   "reading": "furusato nōzei",
+   "meaning": "Donasi ke daerah",
+   "explanation": "Donasi ke kota pilihan yang mengurangi pajak tahun berikutnya dan biasanya dapat hadiah. Ada batas jumlah yang menguntungkan.",
+   "group": "Pajak"
+  },
+  {
+   "japanese": "残業",
+   "reading": "zangyō",
+   "meaning": "Lembur",
+   "explanation": "Kerja di luar 8 jam/hari atau 40 jam/minggu. Dibayar minimal +25% (di atas 60 jam/bulan +50%).",
+   "group": "Kerja & lembur"
+  },
+  {
+   "japanese": "深夜手当",
+   "reading": "shin'ya teate",
+   "meaning": "Tunjangan kerja malam",
+   "explanation": "Tambahan minimal 25% untuk jam kerja 22:00–05:00.",
+   "group": "Kerja & lembur"
+  },
+  {
+   "japanese": "休日出勤",
+   "reading": "kyūjitsu shukkin",
+   "meaning": "Masuk kerja di hari libur",
+   "explanation": "Kerja di hari libur resmi perusahaan (法定休日) dibayar minimal +35%.",
+   "group": "Kerja & lembur"
+  },
+  {
+   "japanese": "有給休暇",
+   "reading": "yūkyū kyūka",
+   "meaning": "Cuti berbayar",
+   "explanation": "Cuti yang tetap digaji. Muncul setelah 6 bulan kerja; wajib dipakai minimal 5 hari setahun jika jatahnya 10 hari atau lebih.",
+   "group": "Kerja & lembur"
+  },
+  {
+   "japanese": "時給",
+   "reading": "jikyū",
+   "meaning": "Upah per jam",
+   "explanation": "Gaji yang dihitung per jam kerja.",
+   "group": "Kerja & lembur"
+  },
+  {
+   "japanese": "振込",
+   "reading": "furikomi",
+   "meaning": "Transfer bank",
+   "explanation": "Mengirim uang ke rekening lain, biasanya ada biaya.",
+   "group": "Bank & pembayaran"
+  },
+  {
+   "japanese": "口座振替",
+   "reading": "kōza furikae",
+   "meaning": "Debit otomatis",
+   "explanation": "Tagihan (listrik, gas, telepon) dibayar otomatis dari rekening.",
+   "group": "Bank & pembayaran"
+  },
+  {
+   "japanese": "残高",
+   "reading": "zandaka",
+   "meaning": "Saldo",
+   "explanation": "Jumlah uang di rekening atau kartu.",
+   "group": "Bank & pembayaran"
+  },
+  {
+   "japanese": "請求書",
+   "reading": "seikyūsho",
+   "meaning": "Tagihan",
+   "explanation": "Surat tagihan; bisa dibayar di konbini jika ada barcode.",
+   "group": "Bank & pembayaran"
+  },
+  {
+   "japanese": "海外送金",
+   "reading": "kaigai sōkin",
+   "meaning": "Kirim uang ke luar negeri",
+   "explanation": "Mengirim uang ke Indonesia, mis. lewat SMILES atau bank. Perhatikan biaya dan kursnya.",
+   "group": "Bank & pembayaran"
+  },
+  {
+   "japanese": "在留カード",
+   "reading": "zairyū kādo",
+   "meaning": "Kartu izin tinggal",
+   "explanation": "Kartu identitas wajib orang asing yang tinggal di Jepang.",
+   "group": "Dokumen & administrasi"
+  },
+  {
+   "japanese": "マイナンバー",
+   "reading": "mai nanbā",
+   "meaning": "Nomor identitas pribadi",
+   "explanation": "Nomor 12 digit untuk pajak dan asuransi. Jangan dibagikan sembarangan.",
+   "group": "Dokumen & administrasi"
+  },
+  {
+   "japanese": "住民票",
+   "reading": "jūminhyō",
+   "meaning": "Surat keterangan domisili",
+   "explanation": "Bukti alamat tempat tinggal dari kantor kota.",
+   "group": "Dokumen & administrasi"
+  },
+  {
+   "japanese": "転出届",
+   "reading": "tenshutsu todoke",
+   "meaning": "Lapor pindah keluar",
+   "explanation": "Lapor ke kantor kota saat pindah kota atau pulang ke Indonesia.",
+   "group": "Dokumen & administrasi"
+  }
+ ]
+}

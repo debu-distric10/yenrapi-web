@@ -1,0 +1,58 @@
+.search {
+  width: 100%;
+  font: inherit;
+  font-size: 17px;
+  padding: 13px 16px;
+  border-radius: 14px;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  margin: 8px 0 8px;
+}
+
+.search:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.group {
+  font-size: 19px;
+  margin: 28px 0 12px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.term {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 16px 18px;
+}
+
+.term p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin-bottom: 4px;
+}
+
+.jp {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.reading {
+  color: var(--muted);
+  font-style: italic;
+}
