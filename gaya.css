@@ -1,0 +1,94 @@
+/* Sengaja tanpa font atau skrip dari luar: halaman ini tidak memanggil
+   server lain, sesuai isi kebijakan privasinya. */
+:root {
+  --bg: #F7F5F0;
+  --card: #FFFFFF;
+  --ink: #1C2433;
+  --muted: #5A6273;
+  --line: #E3DED3;
+  --primary: #2F4A8A;
+  --accent-bg: #FFF6E3;
+  --accent-ink: #6B4A0C;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121722;
+    --card: #1C2333;
+    --ink: #EEF1F6;
+    --muted: #A5ADBC;
+    --line: #2C3546;
+    --primary: #A9BDF0;
+    --accent-bg: #2E2614;
+    --accent-ink: #F2D7A6;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+}
+a { color: var(--primary); }
+.top {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+}
+.top nav { font-size: 14px; color: var(--muted); }
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 8px 16px 32px;
+}
+article {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 24px 20px;
+}
+h1 { margin: 0 0 4px; font-size: 30px; line-height: 1.2; letter-spacing: -0.02em; }
+h2 { margin: 28px 0 6px; font-size: 18px; }
+.meta { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+.summary {
+  background: var(--accent-bg);
+  color: var(--accent-ink);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+ul { padding-left: 22px; }
+hr { border: 0; height: 24px; }
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 0 16px 32px;
+}
+.hero { text-align: center; padding: 32px 20px; }
+.hero h1 { font-size: 34px; }
+.hero p { color: var(--muted); }
+.links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.links a {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+@media (prefers-color-scheme: dark) { .links a { color: #14213F; } }
