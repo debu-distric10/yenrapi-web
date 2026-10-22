@@ -1,0 +1,100 @@
+.hero {
+  text-align: center;
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 6vw, 48px);
+  font-weight: 800;
+  max-width: 720px;
+  margin: 20px auto 12px;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+/* Deretan screenshot yang bisa digeser */
+.shots {
+  overflow-x: auto;
+  padding: 24px 0 8px;
+  scroll-snap-type: x mandatory;
+}
+
+.shotsTrack {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.shotsTrack img {
+  width: 220px;
+  height: auto;
+  border-radius: 22px;
+  scroll-snap-align: center;
+  box-shadow: 0 10px 30px rgb(28 36 51 / 0.15);
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 48px 0 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.grid h3 {
+  margin: 8px 0 4px;
+  font-size: 18px;
+}
+
+.grid p {
+  margin: 0;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+.privacy {
+  margin-top: 48px;
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: 24px;
+  padding: 28px 24px;
+}
+
+.privacy h2 {
+  margin: 0 0 8px;
+}
+
+.privacy a {
+  color: inherit;
+  font-weight: 800;
+}
+
+@media (prefers-color-scheme: dark) {
+  .privacy {
+    background: var(--primary-soft);
+    color: var(--ink);
+  }
+}
