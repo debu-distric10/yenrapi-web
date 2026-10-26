@@ -100,6 +100,11 @@ export default function BerandaPage() {
             </article>
           ))}
         </div>
+        <p>
+          <Link href="/perjalanan">
+            Lihat semua fitur dan perjalanan versi YenRapi →
+          </Link>
+        </p>
       </section>
 
       <section className="wrap">

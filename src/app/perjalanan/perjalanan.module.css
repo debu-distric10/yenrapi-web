@@ -1,0 +1,199 @@
+.head {
+  max-width: 760px;
+  margin: 0 auto 8px;
+}
+
+.head h1 {
+  font-size: clamp(28px, 6vw, 40px);
+  margin: 8px 0 6px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.chips a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.chips a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Garis waktu: satu garis tegak di kiri, satu titik per versi. */
+.timeline {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0 0 0 22px;
+  border-left: 2px solid var(--line);
+}
+
+.versi {
+  position: relative;
+  margin-bottom: 48px;
+  scroll-margin-top: 80px;
+}
+
+.versi::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--bg);
+}
+
+.versiHead {
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.versiHead h2 {
+  font-size: clamp(22px, 4.5vw, 28px);
+  margin: 10px 0 2px;
+}
+
+.nama {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.waktu {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.rilis {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.uji {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.segera {
+  background: var(--accent);
+  color: #1c2433;
+}
+
+.rencana {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border: 1px dashed var(--accent);
+}
+
+/* Kartu fitur: selalu 2 kolom, ke bawah. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.kartu {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.kartu img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 540 / 1230;
+  object-fit: cover;
+  object-position: top;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.isi {
+  padding: 16px 18px 18px;
+}
+
+.isi h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.isi ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.isi li + li {
+  margin-top: 4px;
+}
+
+/* Di layar lebar: gambar di kiri, keterangan di kanan, agar kartu tidak
+   terlalu tinggi. */
+@media (min-width: 820px) {
+  .kartu {
+    flex-direction: row;
+  }
+  .kartu img {
+    width: 42%;
+    flex: none;
+    aspect-ratio: 540 / 1000;
+    border-bottom: 0;
+    border-right: 1px solid var(--line);
+  }
+  .isi {
+    padding: 20px 20px 20px 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .timeline {
+    padding-left: 14px;
+  }
+  .versi::before {
+    left: -23px;
+  }
+  .grid {
+    gap: 10px;
+  }
+  .isi {
+    padding: 10px 10px 12px;
+  }
+  .isi h3 {
+    font-size: 14px;
+  }
+  .isi ul {
+    padding-left: 14px;
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+}
