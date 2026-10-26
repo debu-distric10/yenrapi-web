@@ -50,6 +50,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className="wrap foot-inner">
             <span>© 2026 {situs.nama}</span>
             <Link href="/privasi">Kebijakan Privasi</Link>
+            <Link href="/tentang">Tentang &amp; AI</Link>
             <a href={`mailto:${situs.email}`}>{situs.email}</a>
           </div>
         </footer>
