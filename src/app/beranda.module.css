@@ -1,20 +1,31 @@
+/* Hero: teks + tiga HP bertumpuk */
 .hero {
+  display: grid;
+  gap: 8px;
+  padding-top: 36px;
+  padding-bottom: 8px;
   text-align: center;
-  padding-top: 48px;
-  padding-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 .hero h1 {
-  font-size: clamp(30px, 6vw, 48px);
+  font-size: clamp(32px, 8vw, 52px);
   font-weight: 800;
-  max-width: 720px;
-  margin: 20px auto 12px;
+  max-width: 640px;
+  margin: 10px auto 12px;
 }
 
 .lead {
   color: var(--muted);
   font-size: 18px;
-  max-width: 620px;
+  max-width: 560px;
   margin: 0 auto;
 }
 
@@ -23,56 +34,179 @@
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
-/* Deretan screenshot yang bisa digeser */
-.shots {
-  overflow-x: auto;
-  padding: 24px 0 8px;
-  scroll-snap-type: x mandatory;
-}
-
-.shotsTrack {
+.kepercayaan {
+  list-style: none;
   display: flex;
-  gap: 16px;
-  width: max-content;
-  padding: 0 16px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding: 0;
 }
 
-.shotsTrack img {
-  width: 220px;
-  height: auto;
-  border-radius: 22px;
-  scroll-snap-align: center;
-  box-shadow: 0 10px 30px rgb(28 36 51 / 0.15);
+.kepercayaan li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  font-size: 14px;
+  font-weight: 700;
 }
 
+.tumpukan {
+  position: relative;
+  height: clamp(380px, 100vw, 520px);
+  margin-top: 16px;
+}
+
+/* Cahaya lembut indigo + kunyit di belakang HP */
+.tumpukan::before {
+  content: "";
+  position: absolute;
+  inset: 8% 4%;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, color-mix(in srgb, var(--accent) 45%, transparent), transparent),
+    radial-gradient(closest-side at 30% 60%, color-mix(in srgb, var(--primary) 35%, transparent), transparent);
+  filter: blur(24px);
+}
+
+.hp {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  height: 92%;
+  border: 6px solid #1c2433;
+  border-radius: 28px;
+  background: #1c2433;
+  box-shadow: 0 24px 48px -20px rgb(28 36 51 / 0.55);
+}
+
+.hpTengah {
+  z-index: 2;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+/* HP samping sebagian besar tersembunyi di belakang HP tengah. */
+.hpKiri {
+  top: 6%;
+  transform: translateX(-88%) rotate(-7deg);
+}
+
+.hpKanan {
+  top: 6%;
+  transform: translateX(-12%) rotate(7deg);
+}
+
+/* Bento fitur */
 .sectionTitle {
-  font-size: 28px;
+  font-size: clamp(24px, 5vw, 30px);
   font-weight: 800;
   margin: 48px 0 20px;
   text-align: center;
 }
 
-.grid {
+.bento {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.grid h3 {
-  margin: 8px 0 4px;
-  font-size: 18px;
+.kotak {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
 }
 
-.grid p {
+.kotakTeks {
+  padding: 18px 16px 16px;
+}
+
+.kotak h3 {
+  margin: 6px 0 4px;
+  font-size: 17px;
+}
+
+.kotak p {
   margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.5;
 }
 
 .icon {
-  font-size: 30px;
+  font-size: 26px;
+}
+
+.besar,
+.gelap {
+  grid-column: span 2;
+}
+
+/* Potongan screenshot yang mengintip dari bawah kartu */
+.intip {
+  margin-top: auto;
+  height: 220px;
+  overflow: hidden;
+  padding: 0 18%;
+}
+
+.intip img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 6px solid #1c2433;
+  border-bottom: 0;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -6px 24px -12px rgb(0 0 0 / 0.35);
+}
+
+.besar .intip {
+  background: linear-gradient(to bottom, transparent, var(--primary-soft));
+}
+
+.gelap {
+  background: #121722;
+  border-color: #2c3546;
+  color: #eef1f6;
+}
+
+.gelap p {
+  color: #a5adbc;
+}
+
+.ajakan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.ajakan > span:first-child {
+  display: grid;
+  font-size: 16px;
+}
+
+.ajakan > span:first-child span {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.85;
 }
 
 .privacy {
@@ -96,5 +230,56 @@
   .privacy {
     background: var(--primary-soft);
     color: var(--ink);
+  }
+  .gelap {
+    background: #0b0f17;
+  }
+}
+
+/* Laptop: teks kiri, HP kanan; bento 4 kolom */
+@media (min-width: 880px) {
+  .hero {
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
+    text-align: left;
+    padding-top: 56px;
+  }
+  .hero h1,
+  .lead {
+    margin-left: 0;
+  }
+  .actions,
+  .kepercayaan {
+    justify-content: flex-start;
+  }
+  .tumpukan {
+    height: 520px;
+    margin-top: 0;
+  }
+  .bento {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    gap: 16px;
+  }
+  .besar {
+    grid-row: span 2;
+  }
+  .gelap {
+    grid-column: span 4;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .gelap .kotakTeks {
+    flex: 1;
+    align-self: center;
+    padding: 28px 32px;
+  }
+  .gelap .intip {
+    width: 34%;
+    padding: 0 4%;
+    margin-top: 20px;
+  }
+  .intip {
+    height: 260px;
   }
 }
