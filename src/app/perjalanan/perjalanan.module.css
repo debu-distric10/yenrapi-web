@@ -1,28 +1,40 @@
 .head {
   max-width: 760px;
-  margin: 0 auto 8px;
 }
 
 .head h1 {
-  font-size: clamp(28px, 6vw, 40px);
+  font-size: clamp(30px, 7vw, 44px);
   margin: 8px 0 6px;
 }
 
+/* Pilihan versi: menempel di bawah kepala halaman saat digulir. */
 .chips {
+  position: sticky;
+  top: 64px;
+  z-index: 5;
   display: flex;
-  flex-wrap: wrap;
   gap: 8px;
-  margin-top: 16px;
+  overflow-x: auto;
+  margin: 16px -16px 0;
+  padding: 10px 16px;
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(8px);
+  scrollbar-width: none;
+}
+
+.chips::-webkit-scrollbar {
+  display: none;
 }
 
 .chips a {
-  padding: 6px 14px;
+  flex: none;
+  padding: 7px 16px;
   border-radius: 999px;
   background: var(--card);
   border: 1px solid var(--line);
   color: var(--ink);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -31,169 +43,262 @@
   color: var(--primary);
 }
 
-/* Garis waktu: satu garis tegak di kiri, satu titik per versi. */
-.timeline {
-  list-style: none;
-  margin: 32px 0 0;
-  padding: 0 0 0 22px;
-  border-left: 2px solid var(--line);
-}
-
 .versi {
-  position: relative;
-  margin-bottom: 48px;
-  scroll-margin-top: 80px;
+  margin-top: 28px;
+  scroll-margin-top: 130px;
 }
 
-.versi::before {
-  content: "";
-  position: absolute;
-  left: -31px;
-  top: 4px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--primary);
-  border: 3px solid var(--bg);
+/* Kartu pembuka setiap versi */
+.kartuVersi {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 22px 20px;
 }
 
-.versiHead {
-  max-width: 760px;
-  margin-bottom: 18px;
+.kartuVersi h2 {
+  font-size: clamp(22px, 5.5vw, 30px);
+  margin: 4px 0 6px;
 }
 
-.versiHead h2 {
-  font-size: clamp(22px, 4.5vw, 28px);
-  margin: 10px 0 2px;
-}
-
-.nama {
-  color: var(--muted);
-  font-weight: 600;
-}
-
-.waktu {
+.kartuVersi p {
   margin: 0 0 8px;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 600;
 }
 
-.badge {
+.terbaru {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-primary);
+}
+
+.terbaru .waktu,
+.terbaru .nomor {
+  color: inherit;
+  opacity: 0.8;
+}
+
+.label {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.badge,
+.badgeTerbaru {
   display: inline-block;
   padding: 3px 10px;
   border-radius: 999px;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.02em;
 }
 
-.rilis {
-  background: var(--primary);
-  color: var(--on-primary);
-}
-
-.uji {
-  background: var(--primary-soft);
-  color: var(--primary);
-}
-
-.segera {
+.badgeTerbaru {
   background: var(--accent);
   color: #1c2433;
 }
 
-.rencana {
+.uji,
+.segera,
+.rilis {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.terbaru .badge {
+  background: color-mix(in srgb, var(--on-primary) 18%, transparent);
+  color: inherit;
+}
+
+.nomor {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.waktu {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.sorotan {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+}
+
+.sorotan li {
+  padding: 6px 12px;
+  border-radius: 12px;
   background: var(--accent-soft);
   color: var(--accent-ink);
-  border: 1px dashed var(--accent);
+  font-size: 14px;
+  font-weight: 700;
 }
 
-/* Kartu fitur: selalu 2 kolom, ke bawah. */
-.grid {
+.perubahan {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 10px;
 }
 
-.kartu {
+.perubahan li {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--on-primary) 12%, transparent);
+  font-size: 15px;
+}
+
+.kartuVersi:not(.terbaru) .perubahan li {
+  background: var(--bg);
+}
+
+.jenis {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+/* Kelompok fitur + galeri geser */
+.kelompok {
+  margin-top: 32px;
+}
+
+.kelompok h3 {
+  font-size: 20px;
+  margin: 0 0 4px;
+}
+
+.kelompokRingkas {
+  margin: 0;
+  color: var(--muted);
+  max-width: 620px;
+}
+
+.petunjuk {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.galeri {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 16px;
+  /* Melebar sampai tepi layar agar layar berikutnya terlihat mengintip. */
+  margin: 12px -16px 0;
+  padding: 4px 16px 14px;
+  scrollbar-width: thin;
+}
+
+.layar {
+  flex: 0 0 58%;
+  max-width: 230px;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  background: var(--card);
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--line);
+  gap: 2px;
 }
 
-.kartu img {
+.bingkai {
+  border: 6px solid #1c2433;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #1c2433;
+  box-shadow: 0 10px 24px -14px rgb(0 0 0 / 0.45);
+  margin-bottom: 8px;
+}
+
+.bingkai img {
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 540 / 1230;
-  object-fit: cover;
-  object-position: top;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
 }
 
-.isi {
-  padding: 16px 18px 18px;
-}
-
-.isi h3 {
-  margin: 0 0 8px;
-  font-size: 17px;
-}
-
-.isi ul {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--muted);
+.layar strong {
   font-size: 15px;
-  line-height: 1.55;
 }
 
-.isi li + li {
-  margin-top: 4px;
+.layar span {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.45;
 }
 
-/* Di layar lebar: gambar di kiri, keterangan di kanan, agar kartu tidak
-   terlalu tinggi. */
+/* Rencana: tiga lajur */
+.rencana {
+  margin-top: 56px;
+  scroll-margin-top: 130px;
+}
+
+.rencana h2 {
+  font-size: clamp(24px, 5.5vw, 32px);
+  margin: 0 0 4px;
+}
+
+.lajur {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.lajurKartu {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 18px 18px 8px;
+}
+
+.lajurKartu h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.lajurKartu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lajurKartu li {
+  display: grid;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.lajurKartu li span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 @media (min-width: 820px) {
-  .kartu {
-    flex-direction: row;
+  .chips {
+    margin: 16px 0 0;
+    padding: 10px 0;
   }
-  .kartu img {
-    width: 42%;
-    flex: none;
-    aspect-ratio: 540 / 1000;
-    border-bottom: 0;
-    border-right: 1px solid var(--line);
+  .kartuVersi {
+    padding: 32px 36px;
   }
-  .isi {
-    padding: 20px 20px 20px 18px;
+  .galeri {
+    margin: 12px 0 0;
+    padding: 4px 0 14px;
+    scroll-padding: 0;
   }
-}
-
-@media (max-width: 520px) {
-  .timeline {
-    padding-left: 14px;
+  .layar {
+    flex-basis: 200px;
   }
-  .versi::before {
-    left: -23px;
-  }
-  .grid {
-    gap: 10px;
-  }
-  .isi {
-    padding: 10px 10px 12px;
-  }
-  .isi h3 {
-    font-size: 14px;
-  }
-  .isi ul {
-    padding-left: 14px;
-    font-size: 12.5px;
-    line-height: 1.45;
+  .lajur {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
   }
 }
