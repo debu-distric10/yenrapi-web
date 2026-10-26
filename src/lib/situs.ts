@@ -5,8 +5,8 @@ export const situs = {
   email: "yenrapi.app@gmail.com",
   /** Diisi setelah aplikasi tayang di Google Play. */
   playStore: null as string | null,
-  /** Halaman Trakteer (diisi setelah akun dibuat). */
-  trakteer: null as string | null,
+  /** Halaman Trakteer. */
+  trakteer: "https://trakteer.id/yen__rapi" as string | null,
 };
 
 /** Awalan alamat untuk file di folder public/ (next/link menambah sendiri). */
