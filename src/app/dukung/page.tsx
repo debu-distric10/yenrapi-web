@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { pendukung } from "@/lib/pendukung";
+import { sponsorAktif } from "@/lib/sponsor";
 import { situs } from "@/lib/situs";
 
 export const metadata: Metadata = {
@@ -59,6 +61,22 @@ export default function DukungPage() {
         )}
       </section>
 
+      {sponsorAktif.length > 0 && (
+        <section id="sponsor">
+          <h2>Didukung oleh</h2>
+          <ul>
+            {sponsorAktif.map((s) => (
+              <li key={s.nama}>
+                <a href={s.url} rel="sponsored noopener">
+                  {s.nama}
+                </a>{" "}
+                — {s.kalimat}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <h2>Dukungan lain yang juga berarti</h2>
       <ul>
         <li>Ceritakan YenRapi ke teman kerja atau grup komunitas.</li>
@@ -66,6 +84,10 @@ export default function DukungPage() {
         <li>
           Kirim saran atau laporan masalah ke{" "}
           <a href={`mailto:${situs.email}`}>{situs.email}</a>.
+        </li>
+        <li>
+          Punya usaha atau layanan untuk orang Indonesia di Jepang?{" "}
+          <Link href="/sponsor">Jadi sponsor YenRapi</Link>.
         </li>
       </ul>
     </div>

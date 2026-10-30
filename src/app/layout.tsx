@@ -51,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <span>© 2026 {situs.nama}</span>
             <Link href="/privasi">Kebijakan Privasi</Link>
             <Link href="/tentang">Tentang &amp; AI</Link>
+            <Link href="/sponsor">Jadi Sponsor</Link>
             <a href={`mailto:${situs.email}`}>{situs.email}</a>
           </div>
         </footer>
