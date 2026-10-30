@@ -196,7 +196,9 @@ h3 {
 
 @media (max-width: 520px) {
   .nav {
-    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 4px 12px;
     font-size: 14px;
   }
   .brand span {

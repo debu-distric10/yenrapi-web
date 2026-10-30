@@ -4,8 +4,9 @@ Situs publik aplikasi YenRapi: halaman utama, kalkulator, panduan istilah,
 dukungan, dan [kebijakan privasi](https://debu-distric10.github.io/yenrapi-web/privasi.html).
 
 - Next.js (App Router) + TypeScript, **ekspor statis** (`output: "export"`).
-- Tanpa analitik, pelacak, atau font dari server lain. Kalkulator menghitung
-  di browser.
+- Tanpa pelacak atau font dari server lain. Penghitung pengunjung GoatCounter
+  (tanpa cookie) aktif hanya bila `situs.goatcounter` di `src/lib/situs.ts` diisi.
+- Kalkulator menghitung di browser.
 - Terbit otomatis ke GitHub Pages lewat `.github/workflows/deploy.yml`.
 
 ```

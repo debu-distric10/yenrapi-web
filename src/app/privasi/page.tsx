@@ -83,6 +83,18 @@ export default function PrivasiPage() {
 
         <h2>11. Kontak</h2>
         <p>Pertanyaan tentang privasi: <a href={`mailto:${situs.email}`}>{situs.email}</a>.</p>
+
+        {situs.goatcounter && (
+          <>
+            <h2>12. Website</h2>
+            <p>Kebijakan di atas berlaku untuk aplikasi. Website ini memakai{" "}
+            <a href="https://www.goatcounter.com" rel="noopener">GoatCounter</a> untuk menghitung jumlah
+            pengunjung per halaman. GoatCounter tidak memakai cookie, tidak menyimpan alamat IP, dan tidak
+            mengikuti kamu ke situs lain. Yang tercatat hanya halaman yang dibuka, situs asal, jenis
+            browser, ukuran layar, dan negara. Angka ini dipakai untuk menunjukkan jangkauan YenRapi kepada
+            calon sponsor. Aplikasi YenRapi tidak terhubung dengan penghitung ini.</p>
+          </>
+        )}
       </article>
 
       <hr />
@@ -157,6 +169,18 @@ export default function PrivasiPage() {
 
         <h2>11. Contact</h2>
         <p>Privacy questions: <a href={`mailto:${situs.email}`}>{situs.email}</a>.</p>
+
+        {situs.goatcounter && (
+          <>
+            <h2>12. Website</h2>
+            <p>The policy above covers the app. This website uses{" "}
+            <a href="https://www.goatcounter.com" rel="noopener">GoatCounter</a> to count visitors per
+            page. GoatCounter sets no cookies, does not store IP addresses, and does not follow you to other
+            sites. It records only the page viewed, the referring site, browser type, screen size, and
+            country. These numbers show YenRapi&rsquo;s reach to potential sponsors. The YenRapi app is not
+            connected to this counter.</p>
+          </>
+        )}
       </article>
       </div>
     </div>

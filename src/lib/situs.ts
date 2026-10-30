@@ -7,6 +7,11 @@ export const situs = {
   playStore: null as string | null,
   /** Halaman Trakteer. */
   trakteer: "https://trakteer.id/yen_rapi" as string | null,
+  /**
+   * Kode GoatCounter (mis. "yenrapi" untuk yenrapi.goatcounter.com).
+   * Selama null, situs tidak memuat penghitung apa pun.
+   */
+  goatcounter: null as string | null,
 };
 
 /** Awalan alamat untuk file di folder public/ (next/link menambah sendiri). */
