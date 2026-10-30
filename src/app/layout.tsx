@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Link from "next/link";
+import Script from "next/script";
 import { Logo } from "@/components/Logo";
 import { situs } from "@/lib/situs";
 import "./globals.css";
@@ -56,6 +57,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <a href={`mailto:${situs.email}`}>{situs.email}</a>
           </div>
         </footer>
+        {situs.goatcounter && (
+          // Penghitung pengunjung tanpa cookie; lihat bagian Website di /privasi.
+          <Script
+            data-goatcounter={`https://${situs.goatcounter}.goatcounter.com/count`}
+            src="https://gc.zgo.at/count.js"
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );

@@ -80,8 +80,12 @@ export default function TentangPage() {
 
           <h2>Website ini</h2>
           <p>
-            Website ini juga dibuat dengan bantuan AI dengan cara yang sama. Tidak ada iklan,
-            tidak ada pelacak, dan tidak ada analitik. Kebijakan lengkapnya ada di{" "}
+            Website ini juga dibuat dengan bantuan AI dengan cara yang sama. Tidak ada iklan
+            dan tidak ada pelacak.{" "}
+            {situs.goatcounter
+              ? "Jumlah pengunjung dihitung tanpa cookie. "
+              : "Tidak ada analitik. "}
+            Kebijakan lengkapnya ada di{" "}
             <Link href="/privasi">kebijakan privasi</Link>.
           </p>
         </article>
