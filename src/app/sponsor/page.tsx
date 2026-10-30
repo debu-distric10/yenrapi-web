@@ -65,7 +65,7 @@ export default function SponsorPage() {
         <h2 style={{ marginTop: 0 }}>Hubungi kami</h2>
         <p className="muted">
           Ceritakan singkat layanan Anda dan paket yang diminati. Harga dan angka
-          pengguna kami kirim lewat balasan email ke {situs.email}.
+          pengguna kami kirim lewat balasan email. Alamat: {situs.email}.
         </p>
         <a
           className="btn btn-accent"
