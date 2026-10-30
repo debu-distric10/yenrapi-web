@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { afiliasiUntuk } from "@/lib/afiliasi";
 import { infoPanduan } from "@/lib/panduan";
 
 const info = infoPanduan("kirim-uang");
+const afiliasi = afiliasiUntuk("kirim-uang");
 
 export const metadata: Metadata = {
   title: info.judul,
@@ -127,6 +129,27 @@ export default function KirimUangPage() {
               total biaya kirim setahun langsung kelihatan.
             </li>
           </ul>
+
+          {afiliasi.length > 0 && (
+            <>
+              <h2>Layanan yang bisa dicoba</h2>
+              <ul>
+                {afiliasi.map((t) => (
+                  <li key={t.url}>
+                    <a href={t.url} rel="sponsored noopener">
+                      {t.nama}
+                    </a>{" "}
+                    — {t.catatan}
+                  </li>
+                ))}
+              </ul>
+              <p className="muted">
+                Tautan di atas adalah tautan afiliasi: YenRapi mendapat komisi
+                kecil bila kamu mendaftar lewat tautan itu, tanpa biaya tambahan
+                untukmu. Tetap bandingkan dengan layanan lain.
+              </p>
+            </>
+          )}
 
           <p className="muted">
             Panduan ini tidak disponsori dan bukan nasihat keuangan resmi. Syarat
