@@ -49,6 +49,21 @@ export const daftarKalkulator = [
     deskripsi:
       "Konversi Yen ke Rupiah dan sebaliknya dengan kurs pilihanmu, plus total biaya kirim.",
   },
+  // Dua kalkulator berikut hanya ada di website.
+  {
+    slug: "tanggungan",
+    judul: "Tanggungan Keluarga (扶養控除)",
+    ringkas: "Cek keluarga di Indonesia yang bisa jadi tanggungan pajak.",
+    deskripsi:
+      "Cek apakah orang tua, pasangan, atau anak di Indonesia bisa didaftarkan sebagai tanggungan pajak (扶養控除), dokumen yang dibutuhkan, dan perkiraan pajak yang dihemat.",
+  },
+  {
+    slug: "cuti",
+    judul: "Cuti Berbayar (有給休暇)",
+    ringkas: "Berapa hari cuti berbayar yang menjadi hakmu.",
+    deskripsi:
+      "Hitung hak cuti berbayar (年次有給休暇) menurut lama kerja dan jadwal kerja per minggu, sesuai 労働基準法.",
+  },
 ] as const;
 
 export type SlugKalkulator = (typeof daftarKalkulator)[number]["slug"];

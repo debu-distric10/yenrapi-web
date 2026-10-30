@@ -6,7 +6,7 @@ import { daftarKalkulator } from "@/lib/kalkulator/daftar";
 export const metadata: Metadata = {
   title: "Kalkulator gaji, lembur, pajak & nenkin Jepang",
   description:
-    "Kalkulator gratis untuk orang Indonesia di Jepang: gaji bersih, lembur, pajak & potongan, bonus, 住民税, nenkin lump-sum, dan kurs Yen–Rupiah. Aturan resmi 2026.",
+    "Kalkulator gratis untuk orang Indonesia di Jepang: gaji bersih, lembur, pajak & potongan, bonus, 住民税, nenkin lump-sum, kurs Yen–Rupiah, tanggungan keluarga (扶養控除), dan cuti berbayar. Aturan resmi 2026.",
 };
 
 export default function KalkulatorPage() {
@@ -14,9 +14,9 @@ export default function KalkulatorPage() {
     <div className="wrap page">
       <h1>Kalkulator</h1>
       <p className="muted">
-        Perkiraan berdasarkan aturan resmi Jepang 2026 — sama dengan kalkulator
-        di aplikasi YenRapi. Semua hitungan dilakukan di browser-mu; tidak ada
-        data yang dikirim.
+        Perkiraan berdasarkan aturan resmi Jepang 2026. Tujuh kalkulator pertama
+        sama dengan kalkulator di aplikasi YenRapi. Semua hitungan dilakukan di
+        browser-mu; tidak ada data yang dikirim.
       </p>
       <div className={styles.list}>
         {daftarKalkulator.map((k) => (
