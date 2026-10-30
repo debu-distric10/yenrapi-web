@@ -39,6 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </Link>
             <nav aria-label="Menu utama" className="nav">
               <Link href="/kalkulator">Kalkulator</Link>
+              <Link href="/panduan">Panduan</Link>
               <Link href="/istilah">Istilah</Link>
               <Link href="/perjalanan">Perjalanan</Link>
               <Link href="/dukung">Dukung</Link>
