@@ -10,6 +10,14 @@ export type Panduan = {
 
 export const daftarPanduan: Panduan[] = [
   {
+    slug: "pulang",
+    ikon: "🧳",
+    judul: "Persiapan keuangan sebelum pulang ke Indonesia",
+    ringkas:
+      "Urutan yang perlu diurus: 住民税, tagihan, 転出届, rekening, sampai klaim 脱退一時金 nenkin setelah sampai di Indonesia.",
+    diperbarui: "2026-10-30",
+  },
+  {
     slug: "kirim-uang",
     ikon: "📮",
     judul: "Cara kirim uang ke Indonesia dari Jepang",
