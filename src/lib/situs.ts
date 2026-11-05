@@ -5,6 +5,11 @@ export const situs = {
   email: "yenrapi.app@gmail.com",
   /** Diisi setelah aplikasi tayang di Google Play. */
   playStore: null as string | null,
+  /** Uji tertutup: gabung grup dulu, lalu daftar jadi penguji di Play. */
+  ujiCoba: {
+    grup: "https://groups.google.com/g/yenrapi",
+    play: "https://play.google.com/apps/testing/com.yenrapi.app",
+  },
   /** Halaman Trakteer. */
   trakteer: "https://trakteer.id/yen_rapi" as string | null,
   /**

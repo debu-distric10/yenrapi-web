@@ -44,6 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Link href="/istilah">Istilah</Link>
               <Link href="/perjalanan">Perjalanan</Link>
               <Link href="/dukung">Dukung</Link>
+              <Link href="/coba">Coba</Link>
             </nav>
           </div>
         </header>

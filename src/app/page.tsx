@@ -94,9 +94,9 @@ export default function BerandaPage() {
                 Unduh di Google Play
               </a>
             ) : (
-              <span className="btn btn-accent" aria-disabled="true">
-                Segera di Google Play
-              </span>
+              <Link className="btn btn-accent" href="/coba">
+                Coba duluan (Android)
+              </Link>
             )}
             <Link className="btn" href="/kalkulator">
               Coba kalkulator gaji
