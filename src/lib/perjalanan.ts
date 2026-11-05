@@ -60,12 +60,209 @@ export const labelPerubahan: Record<JenisPerubahan, string> = {
   perbaikan: "🔧 Perbaikan",
 };
 
+/** Waktu untuk versi yang masuk uji tertutup bersama 1.6.0. */
+const ujiNovember = "Uji tertutup sejak November 2026";
+
 export const versi: Versi[] = [
+  {
+    versi: "1.6.0",
+    nama: "Rencana Pulang & Usaha",
+    status: "uji",
+    waktu: ujiNovember,
+    judul: "Cukupkah uangku saat pulang nanti?",
+    ringkasan:
+      "Hitung uang yang kamu bawa pulang: tabungan, kiriman untuk masa depan, dan perkiraan 脱退一時金, dibandingkan dengan dana darurat dan modal usaha.",
+    sorotan: ["Rencana Pulang", "脱退一時金 dari slip", "Kiriman \"untuk apa?\""],
+    folder: "1.6.0",
+    kelompok: [
+      {
+        ikon: "✈️",
+        judul: "Rencana Pulang",
+        ringkasan: "Atur bulan pulang, lalu lihat apakah uangnya cukup. Kalau kurang, ada saran tambahan tabungan per bulan.",
+        layar: [
+          { gambar: "target-rencana-pulang.webp", judul: "Kartu di tab Target", keterangan: "\"Cukupkah uangku saat pulang?\"" },
+          { gambar: "atur-rencana.webp", judul: "Atur rencana", keterangan: "Bulan pulang, rekening yang dihitung, dana darurat, modal usaha." },
+          { gambar: "rencana-pulang.webp", judul: "Belum cukup", keterangan: "Kurang berapa, dan saran menabung per bulan." },
+          { gambar: "rencana-pulang-cukup.webp", judul: "Sudah cukup", keterangan: "Lebih berapa saat pulang nanti." },
+          { gambar: "rencana-pulang-rincian.webp", judul: "Rincian", keterangan: "Rekening, tabungan sampai pulang, 脱退一時金, kebutuhan di Indonesia." },
+          { gambar: "beranda-pulang.webp", judul: "Di Beranda", keterangan: "Kartu kecil \"Pulang N bulan lagi\"." },
+        ],
+      },
+      {
+        ikon: "📮",
+        judul: "Kiriman & nenkin",
+        ringkasan: "Kiriman bisa ditandai untuk apa, dan perkiraan nenkin dihitung dari slip gaji.",
+        layar: [
+          { gambar: "kiriman-untuk-apa.webp", judul: "Untuk apa?", keterangan: "Kebutuhan keluarga, tabungan, atau modal usaha." },
+          { gambar: "atur-nenkin.webp", judul: "脱退一時金 otomatis", keterangan: "Dihitung dari potongan 厚生年金 di slip gaji." },
+        ],
+      },
+    ],
+  },
+  {
+    versi: "1.5.0",
+    nama: "Cari & aman",
+    status: "uji",
+    waktu: ujiNovember,
+    judul: "Cari transaksi lama dalam hitungan detik",
+    ringkasan:
+      "Cari lewat catatan, kategori, rekening, atau nominal di semua bulan. Ditambah pengingat backup supaya data tidak hilang saat ganti HP.",
+    folder: "1.5.0",
+    kelompok: [
+      {
+        ikon: "🔍",
+        judul: "Cari transaksi",
+        ringkasan: "Ketik \"ramen\" atau \"1500\", lalu saring per jenis, rekening, atau batas nominal.",
+        layar: [
+          { gambar: "cari-transaksi.webp", judul: "Kotak cari", keterangan: "Mencari di semua bulan sekaligus." },
+          { gambar: "cari-hasil.webp", judul: "Hasil pencarian", keterangan: "Dikelompokkan per tanggal." },
+          { gambar: "cari-batas-nominal.webp", judul: "Batas nominal", keterangan: "Minimal dan maksimal." },
+          { gambar: "cari-hasil-saring.webp", judul: "Hasil tersaring", keterangan: "Hanya yang sesuai saringan." },
+        ],
+      },
+      {
+        ikon: "💾",
+        judul: "Pengingat backup",
+        ringkasan: "Kartu di Beranda kalau sudah 30 hari belum backup. Tanpa notifikasi, tanpa izin baru.",
+        layar: [
+          { gambar: "pengingat-backup.webp", judul: "Kartu pengingat", keterangan: "\"Backup sekarang\" atau \"Nanti saja\"." },
+        ],
+      },
+    ],
+  },
+  {
+    versi: "1.4.0",
+    nama: "Ekspor data",
+    status: "uji",
+    waktu: ujiNovember,
+    judul: "Datamu bisa dibawa ke Excel",
+    ringkasan:
+      "Ekspor transaksi, slip gaji, kiriman, utang, dan target ke satu file Excel. Statistik bisa memakai tanggal sendiri dan dibagikan sebagai gambar.",
+    folder: "1.4.0",
+    kelompok: [
+      {
+        ikon: "📊",
+        judul: "Ekspor ke Excel",
+        ringkasan: "Pilih sendiri bagian dan rentang tanggalnya. Foto dokumen tidak pernah ikut.",
+        layar: [
+          { gambar: "pengaturan-ekspor.webp", judul: "Di Pengaturan", keterangan: "Data → Ekspor ke Excel." },
+          { gambar: "ekspor-excel.webp", judul: "Pilih isi", keterangan: "Satu sheet per bagian." },
+          { gambar: "ekspor-excel-simpan.webp", judul: "Simpan atau bagikan", keterangan: "Ada peringatan: file Excel tidak dikunci password." },
+        ],
+      },
+      {
+        ikon: "📅",
+        judul: "Statistik lebih leluasa",
+        ringkasan: "Pilih tanggal sendiri, lalu bagikan ringkasannya sebagai gambar dengan nominal tersembunyi.",
+        layar: [
+          { gambar: "statistik-pilih-tanggal.webp", judul: "Pilih tanggal", keterangan: "Rentang bebas lewat kalender." },
+          { gambar: "statistik-tanggal-sendiri.webp", judul: "Hasilnya", keterangan: "Sampai 31 hari ditampilkan per hari." },
+          { gambar: "bagikan-nominal-tersembunyi.webp", judul: "Bagikan gambar", keterangan: "Nominal disembunyikan sebagai bawaan." },
+          { gambar: "bagikan-nominal-tampil.webp", judul: "Atau tampilkan", keterangan: "Kalau memang mau menunjukkan angkanya." },
+        ],
+      },
+    ],
+  },
+  {
+    versi: "1.3.0",
+    nama: "Rupiah lebih lengkap",
+    status: "uji",
+    waktu: ujiNovember,
+    judul: "Utang dan target tabungan dalam Rupiah",
+    ringkasan:
+      "Cicilan di Indonesia atau tabungan DP rumah bisa dicatat dalam Rupiah, dibayar dari rekening Rupiah. Total yen dan Rupiah dipisah, plus perkiraan gabungan.",
+    folder: "1.3.0",
+    kelompok: [
+      {
+        ikon: "🇮🇩",
+        judul: "Yen atau Rupiah",
+        ringkasan: "Pilih mata uangnya saat membuat. Kekayaan bersih ikut menghitung semuanya.",
+        layar: [
+          { gambar: "utang-rupiah.webp", judul: "Utang & cicilan", keterangan: "Total per mata uang." },
+          { gambar: "utang-form-rupiah.webp", judul: "Catat utang Rupiah", keterangan: "Pilih ¥ atau Rp." },
+          { gambar: "target-yen-rupiah.webp", judul: "Target tabungan", keterangan: "Ringkasan terpisah untuk yen dan Rupiah." },
+          { gambar: "target-form-rupiah.webp", judul: "Target dalam Rupiah", keterangan: "Mis. DP rumah di Indonesia." },
+          { gambar: "kekayaan-bersih.webp", judul: "Kekayaan bersih", keterangan: "Ikut menghitung utang dan piutang Rupiah." },
+        ],
+      },
+    ],
+  },
+  {
+    versi: "1.2.0",
+    nama: "Statistik & grafik",
+    status: "uji",
+    waktu: ujiNovember,
+    judul: "Uangmu habis ke mana, kelihatan dalam grafik",
+    ringkasan:
+      "Pemasukan vs pengeluaran, kategori terbesar, rincian potongan gaji Jepang, rasio menabung, dan tren saldo. Ketuk grafik untuk melihat transaksinya.",
+    folder: "1.2.0",
+    kelompok: [
+      {
+        ikon: "📈",
+        judul: "Statistik",
+        ringkasan: "Rentang 1 minggu sampai 1 tahun. Hanya menghitung yen.",
+        layar: [
+          { gambar: "keuangan-statistik.webp", judul: "Tab Keuangan baru", keterangan: "Kartu Statistik di paling atas." },
+          { gambar: "statistik-ringkasan.webp", judul: "Ringkasan", keterangan: "Analisis singkat bulan ini." },
+          { gambar: "statistik-1-minggu.webp", judul: "1 minggu", keterangan: "Pemasukan vs pengeluaran per hari." },
+          { gambar: "statistik-1-bulan.webp", judul: "1 bulan", keterangan: "Tampilan bawaan untuk pengguna baru." },
+          { gambar: "statistik-kategori.webp", judul: "Per kategori", keterangan: "Pengeluaran terbesar ke mana." },
+          { gambar: "statistik-gaji.webp", judul: "Rincian gaji", keterangan: "Pajak 所得税 + 住民税 dan asuransi 社会保険." },
+          { gambar: "statistik-saldo.webp", judul: "Tren saldo", keterangan: "Saldo dan kekayaan dari bulan ke bulan." },
+          { gambar: "statistik-harian-anggaran.webp", judul: "Harian & anggaran", keterangan: "Pengeluaran harian dan sisa anggaran." },
+          { gambar: "statistik-rincian.webp", judul: "Rincian transaksi", keterangan: "Ketuk grafik, muncul transaksinya." },
+        ],
+      },
+      {
+        ikon: "🧮",
+        judul: "Kalkulator dari slip",
+        ringkasan: "Kalkulator pajak, gaji, lembur, dan bonus bisa diisi dari slip gaji terbaru.",
+        layar: [
+          { gambar: "kalkulator-isi-dari-slip.webp", judul: "Isi dari slip", keterangan: "Satu ketukan, angka terisi." },
+          { gambar: "keuangan-modul.webp", judul: "Angka di tiap menu", keterangan: "Ringkasan terkini langsung di menu Keuangan." },
+        ],
+      },
+    ],
+  },
+  {
+    versi: "1.1.0",
+    nama: "Belajar tanpa takut",
+    status: "uji",
+    waktu: ujiNovember,
+    judul: "Coba dulu dengan data contoh, ada panduannya",
+    ringkasan:
+      "Mode latihan berisi data contoh 6 bulan tanpa menyentuh data asli, panduan 13 langkah, dan sapaan dengan nama panggilanmu.",
+    folder: "1.1.0",
+    kelompok: [
+      {
+        ikon: "🧪",
+        judul: "Mode latihan",
+        ringkasan: "Coba semua fitur dengan data contoh. Data asli aman.",
+        layar: [
+          { gambar: "mode-latihan.webp", judul: "Mode latihan", keterangan: "Ditandai pita kuning di atas layar." },
+          { gambar: "kartu-baru.webp", judul: "Baru di YenRapi", keterangan: "Kartu untuk pengguna lama, boleh dilewati." },
+        ],
+      },
+      {
+        ikon: "🧭",
+        judul: "Panduan & nama panggilan",
+        ringkasan: "Panduan menyorot tombol-tombol penting. Bisa diulang dari Pengaturan.",
+        layar: [
+          { gambar: "pembuka-nama.webp", judul: "Mau dipanggil siapa?", keterangan: "Di layar pembuka, boleh dilewati." },
+          { gambar: "panduan-sapaan.webp", judul: "Selamat datang", keterangan: "Langkah pertama panduan." },
+          { gambar: "panduan-saldo.webp", judul: "Total saldo", keterangan: "Penjelasan tiap bagian Beranda." },
+          { gambar: "panduan-tombol.webp", judul: "Tombol cepat", keterangan: "Keluar, Masuk, Kirim, Transfer." },
+          { gambar: "panduan-slip.webp", judul: "Slip gaji", keterangan: "Menjelaskan menu slip gaji." },
+          { gambar: "pengaturan-profil.webp", judul: "Pengaturan", keterangan: "Ubah nama, ulangi panduan, mode latihan." },
+        ],
+      },
+    ],
+  },
   {
     versi: "1.0.1",
     nama: "Perbaikan baca slip gaji",
-    status: "segera",
-    waktu: "Akhir Oktober 2026",
+    status: "uji",
+    waktu: ujiNovember,
     judul: "Foto slip gaji kembali terbaca otomatis",
     ringkasan:
       "Pembaruan kecil untuk penguji. Semua fitur dan data dari 1.0.0 tetap sama.",
@@ -179,24 +376,22 @@ export const rencana: LajurRencana[] = [
     judul: "Sedang dikerjakan",
     item: [
       { judul: "Rilis publik di Google Play", isi: "Uji tertutup bersama penguji sebelum bisa diunduh semua orang." },
-      { judul: "Pembaruan 1.0.1", isi: "Perbaikan baca foto slip gaji untuk para penguji." },
     ],
   },
   {
     ikon: "⏭️",
     judul: "Berikutnya",
     item: [
-      { judul: "Utang & cicilan dalam Rupiah", isi: "Dibayar dari rekening Rupiah, total per mata uang." },
-      { judul: "Target tabungan dalam Rupiah", isi: "Mis. DP rumah di Indonesia, progres dipisah per mata uang." },
-      { judul: "Mode Latihan", isi: "Coba semua fitur dengan data contoh tanpa mengganggu data asli." },
-      { judul: "Grafik & Laporan", isi: "Tren bulanan dan kategori terbesar." },
+      { judul: "Catat lebih cepat", isi: "Widget \"+ Catat pengeluaran\" di layar utama dan kotak kategori yang paling sering dipakai." },
+      { judul: "PIN Dokumen & sembunyikan saldo", isi: "Dokumen penting dikunci PIN, saldo di Beranda bisa disembunyikan." },
+      { judul: "Simulasi tabungan", isi: "Hitung hasil menabung rutin, lalu jadikan target." },
+      { judul: "Panduan di setiap halaman", isi: "Tombol ? untuk penjelasan langsung di tempat." },
     ],
   },
   {
     ikon: "💭",
     judul: "Nanti",
     item: [
-      { judul: "Ekspor ke CSV/Excel", isi: "Olah sendiri data transaksi." },
       { judul: "Sinkronisasi cloud (opsional)", isi: "Terenkripsi di HP sebelum dikirim; tanpa login tetap bisa dipakai penuh." },
       { judul: "Versi iPhone", isi: "Setelah versi Android stabil." },
     ],
