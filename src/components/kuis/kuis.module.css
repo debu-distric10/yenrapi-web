@@ -1,0 +1,185 @@
+.kuis,
+.hasil {
+  display: grid;
+  gap: 16px;
+}
+
+.kemajuan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.kemajuan div {
+  display: flex;
+  gap: 6px;
+}
+
+.kemajuan div span {
+  width: 28px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.kemajuan div .titikAktif {
+  background: var(--primary);
+}
+
+.pertanyaan {
+  display: grid;
+  gap: 8px;
+  padding: 20px 18px;
+  border-radius: 22px;
+  background: var(--card);
+}
+
+.pertanyaan span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-ink);
+}
+
+.pertanyaan h2 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.opsi {
+  display: grid;
+  gap: 10px;
+}
+
+.opsi button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 58px;
+  padding: 0 16px;
+  border-radius: 16px;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.opsi button:not(:disabled):hover {
+  border-color: var(--primary);
+}
+
+.huruf {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.opsi button[data-status="benar"] {
+  border-color: var(--income);
+  background: color-mix(in srgb, var(--income) 12%, var(--card));
+  font-weight: 800;
+  cursor: default;
+}
+
+.opsi button[data-status="benar"] .huruf {
+  background: var(--income);
+  color: var(--card);
+}
+
+.opsi button[data-status="salah"] {
+  border-color: var(--expense);
+  background: color-mix(in srgb, var(--expense) 12%, var(--card));
+  cursor: default;
+}
+
+.opsi button[data-status="salah"] .huruf {
+  background: var(--expense);
+  color: var(--card);
+}
+
+.opsi button[data-status="redup"] {
+  color: var(--muted);
+  background: transparent;
+  cursor: default;
+}
+
+.penjelasan {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.penjelasan svg {
+  flex: none;
+}
+
+.penjelasan div {
+  display: grid;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.penjelasan strong {
+  font-size: 15px;
+}
+
+.hasil {
+  justify-items: center;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.hasil h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.hasil p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.hasil :global(.btn) {
+  justify-self: stretch;
+}
+
+.piala {
+  display: flex;
+  gap: 6px;
+}
+
+.skor {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.ulang {
+  justify-self: stretch;
+  min-height: 50px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}

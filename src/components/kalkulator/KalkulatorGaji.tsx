@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { jamKeMenit, monthlyFromHourly } from "@/lib/kalkulator/hitung";
-import { bacaAngka, BidangAngka, BidangYen } from "./Bidang";
+import { bacaAngka, BidangAngka, BidangYen, SetaraOnigiri } from "./Bidang";
 import { Potongan } from "./Potongan";
 import styles from "./kalkulator.module.css";
 
@@ -28,9 +28,23 @@ export function KalkulatorGaji() {
   const gross =
     base + (bacaAngka(lembur) ?? 0) + (bacaAngka(tunjangan) ?? 0) + commute;
 
+  function isiContoh() {
+    setPerJam(false);
+    setBulanan("220,000");
+    setLembur("32,400");
+    setTunjangan("10,000");
+    setTransport("8,000");
+  }
+
   return (
     <div className="stack">
       <div className={styles.form}>
+        <div className={styles.formHead}>
+          <h2>Penghasilan bulan ini</h2>
+          <button type="button" className={styles.tombolKecil} onClick={isiContoh}>
+            Isi contoh
+          </button>
+        </div>
         <div className={styles.segmented} role="group" aria-label="Jenis gaji">
           <button
             type="button"
@@ -73,7 +87,16 @@ export function KalkulatorGaji() {
             onChange={setBulanan}
           />
         )}
-        <BidangYen label="Upah lembur (残業手当)" value={lembur} onChange={setLembur} />
+        <BidangYen
+          label="Upah lembur (残業手当)"
+          value={lembur}
+          onChange={setLembur}
+        />
+        <SetaraOnigiri
+          yen={bacaAngka(lembur) ?? 0}
+          awalan="Lemburmu setara"
+          akhiran="Jangan lupa istirahat."
+        />
         <BidangYen
           label="Tunjangan lain (手当)"
           value={tunjangan}

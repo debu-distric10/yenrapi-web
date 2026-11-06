@@ -1,29 +1,154 @@
-.search {
-  width: 100%;
-  font: inherit;
-  font-size: 17px;
-  padding: 13px 16px;
+/* Kotak cari + kategori, menempel di bawah kepala halaman saat menggulir */
+.saring {
+  position: sticky;
+  top: 60px;
+  z-index: 5;
+  display: grid;
+  gap: 10px;
+  margin: 8px -16px 0;
+  padding: 10px 16px;
+  background: var(--bg);
+}
+
+.cari {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 14px;
   border-radius: 14px;
   border: 1.5px solid var(--line);
   background: var(--card);
-  color: var(--ink);
-  margin: 8px 0 8px;
+  color: var(--muted);
 }
 
-.search:focus {
-  outline: none;
+.cari:focus-within {
   border-color: var(--primary);
 }
 
+.cari input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin: 0 -16px;
+  padding: 0 16px 2px;
+  scrollbar-width: none;
+}
+
+.chips button {
+  flex: none;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chips button[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+  font-weight: 800;
+}
+
+/* Istilah hari ini */
+.unggulan {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 18px;
+  border-radius: 22px;
+  background: #2f4a8a;
+  color: #fff;
+}
+
+.unggulanLabel {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.unggulanKepala {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+}
+
+.unggulanKepala span {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.unggulanKepala em {
+  color: #dde3f0;
+  flex: 1;
+}
+
+.unggulan strong {
+  font-size: 17px;
+}
+
+.unggulan p {
+  margin: 0;
+  color: #dde3f0;
+  font-size: 14px;
+}
+
+.dengar,
+.dengarBesar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+}
+
+.dengar {
+  background: var(--bg);
+  color: var(--primary);
+}
+
+.dengarBesar {
+  background: rgb(255 255 255 / 0.16);
+  color: #fff;
+}
+
 .group {
-  font-size: 19px;
-  margin: 28px 0 12px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 26px 0 10px;
 }
 
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 10px;
 }
 
 .term {
@@ -35,15 +160,23 @@
 .term p {
   margin: 4px 0 0;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .head {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+
+.headTeks {
+  display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 4px 10px;
-  margin-bottom: 4px;
+  min-width: 0;
 }
 
 .jp {
@@ -55,4 +188,5 @@
 .reading {
   color: var(--muted);
   font-style: italic;
+  font-size: 14px;
 }

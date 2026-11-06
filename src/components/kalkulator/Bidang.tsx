@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, type ReactNode } from "react";
+import { Ikon, Onigiri } from "@/components/Ikon";
 import { aturan2026, prefekturBawaan } from "@/lib/kalkulator/aturan2026";
 import { parseRate } from "@/lib/kalkulator/hitung";
 export { jamKeMenit } from "@/lib/kalkulator/hitung";
@@ -253,9 +254,15 @@ export function Baris({
   );
 }
 
-export function KartuHasil({ children }: { children: ReactNode }) {
+export function KartuHasil({
+  children,
+  id,
+}: {
+  children: ReactNode;
+  id?: string;
+}) {
   return (
-    <div className={styles.result} aria-live="polite">
+    <div className={styles.result} aria-live="polite" id={id}>
       {children}
     </div>
   );
@@ -282,4 +289,77 @@ export function CatatanPerkiraan({ butir }: { butir: ReactNode[] }) {
 export function bulanIni(): number {
   const d = new Date();
   return d.getFullYear() * 12 + d.getMonth();
+}
+
+/** Harga patokan satu onigiri konbini, untuk perbandingan yang lucu saja. */
+export const hargaOnigiri = 150;
+
+/** "Setara N onigiri" di bawah kolom angka. */
+export function SetaraOnigiri({
+  yen,
+  awalan,
+  akhiran,
+}: {
+  yen: number;
+  awalan: string;
+  akhiran?: string;
+}) {
+  if (yen < hargaOnigiri) return null;
+  const n = Math.floor(yen / hargaOnigiri);
+  return (
+    <p className={styles.onigiri}>
+      <Onigiri ukuran={30} />
+      <span>
+        {awalan} <strong>{formatter.format(n)} onigiri</strong> konbini
+        (¥{hargaOnigiri}/buah).{akhiran ? ` ${akhiran}` : ""}
+      </span>
+    </p>
+  );
+}
+
+/**
+ * Bar gaji bersih yang menempel di bawah layar selama pengunjung mengisi,
+ * jadi hasilnya kelihatan tanpa harus menggulir ke bawah.
+ */
+export function BarHasil({
+  label,
+  nilai,
+  keterangan,
+  target,
+}: {
+  label: string;
+  nilai: number;
+  keterangan: string;
+  target: string;
+}) {
+  return (
+    <div className={styles.barHasil}>
+      <div>
+        <small>{label}</small>
+        <strong>{formatYen(nilai)}</strong>
+        <small>{keterangan}</small>
+      </div>
+      <a href={`#${target}`}>
+        Rincian <Ikon nama="kanan" ukuran={16} tebal={2.4} />
+      </a>
+    </div>
+  );
+}
+
+/** Bar porsi: dibawa pulang vs dipotong. */
+export function Porsi({ bersih, kotor }: { bersih: number; kotor: number }) {
+  if (kotor <= 0) return null;
+  const pulang = Math.max(0, Math.min(100, Math.round((bersih / kotor) * 100)));
+  return (
+    <>
+      <div className={styles.porsi} aria-hidden="true">
+        <span style={{ width: `${pulang}%` }} />
+        <span style={{ width: `${100 - pulang}%` }} />
+      </div>
+      <p className={styles.porsiLabel}>
+        <span>Dibawa pulang {pulang}%</span>
+        <span>Dipotong {100 - pulang}%</span>
+      </p>
+    </>
+  );
 }

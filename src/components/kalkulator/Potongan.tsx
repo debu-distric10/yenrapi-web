@@ -6,20 +6,25 @@ import { calculateDeductions } from "@/lib/kalkulator/hitung";
 import {
   asuransiBawaan,
   bacaAngka,
+  BarHasil,
   Baris,
   BidangAngka,
   BidangYen,
   bulanIni,
   CatatanPerkiraan,
+  formatYen,
   Garis,
   KartuHasil,
   PilihAsuransi,
   Pilihan,
   pilihanTanggungan,
+  Porsi,
   Saklar,
   tarifAsuransi,
 } from "./Bidang";
 import styles from "./kalkulator.module.css";
+
+const idHasil = "hasil-potongan";
 
 /**
  * Bagian "Potongan dan gaji bersih" (sama dengan deductions_section.dart):
@@ -94,7 +99,7 @@ export function Potongan({
         />
       </div>
 
-      <KartuHasil>
+      <KartuHasil id={idHasil}>
         <h2>Potongan dan gaji bersih</h2>
         {result ? (
           <>
@@ -142,6 +147,10 @@ export function Potongan({
               nilai={result.takeHome - residentTax}
               tebal
             />
+            <Porsi
+              bersih={result.takeHome - residentTax}
+              kotor={result.grossPay}
+            />
           </>
         ) : (
           <p className={styles.empty}>
@@ -158,6 +167,14 @@ export function Potongan({
           ]}
         />
       </KartuHasil>
+      {result && (
+        <BarHasil
+          label="Gaji bersih (perkiraan)"
+          nilai={result.takeHome - residentTax}
+          keterangan={`dari ${formatYen(result.grossPay)} · dipotong ${formatYen(result.totalDeductions + residentTax)}`}
+          target={idHasil}
+        />
+      )}
     </>
   );
 }

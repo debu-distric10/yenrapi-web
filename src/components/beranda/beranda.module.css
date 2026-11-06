@@ -1,0 +1,655 @@
+.beranda {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  padding-top: 24px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Pembuka */
+.hero {
+  display: grid;
+  gap: 20px;
+}
+
+.heroTeks {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(30px, 8.4vw, 50px);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.hero h1 span {
+  color: var(--primary);
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.tombolUtama {
+  justify-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 16px;
+  background: var(--accent);
+  color: #1c2433;
+  font-weight: 800;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.janji {
+  justify-self: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.janji li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 4px;
+  border-radius: 14px;
+  background: var(--card);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.janji svg {
+  color: var(--primary);
+}
+
+/* Layar aplikasi dengan dua stiker */
+.hp {
+  position: relative;
+  justify-self: center;
+  width: min(236px, 62vw);
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 34px;
+  background: #1c2433;
+  box-shadow: 0 24px 48px -12px rgb(28 36 51 / 0.35);
+}
+
+.hp img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 26px;
+}
+
+.stiker {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgb(28 36 51 / 0.16);
+}
+
+.stikerKiri {
+  left: -18%;
+  top: 14%;
+  background: var(--card);
+  color: var(--ink);
+  transform: rotate(-4deg);
+}
+
+.stikerKiri svg {
+  color: var(--expense);
+}
+
+.stikerKanan {
+  right: -16%;
+  bottom: 18%;
+  background: #1c2433;
+  color: #fff;
+  border: 1px solid #2c3546;
+  transform: rotate(3deg);
+}
+
+.stikerKanan svg {
+  color: var(--accent);
+}
+
+/* Hitung mundur gajian */
+.gajian {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 22px;
+  background: #2f4a8a;
+  color: #fff;
+}
+
+.gajianAtas {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #dde3f0;
+}
+
+.gajianAngka {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.gajianAngka strong {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.gajianBar {
+  height: 8px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.18);
+  overflow: hidden;
+}
+
+.gajianBar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+
+.gajianPilih {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  color: #dde3f0;
+}
+
+.gajianPilih div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.gajianPilih button {
+  min-height: 40px;
+  min-width: 56px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.4);
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gajianPilih button[aria-pressed="true"] {
+  background: #fff;
+  border-color: #fff;
+  color: #2f4a8a;
+  font-weight: 800;
+}
+
+.gajianPesan {
+  margin: 0;
+  font-size: 13px;
+  color: #dde3f0;
+}
+
+/* Bagian berjudul */
+.bagian {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.bagian h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.judulBaris {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.judulBaris span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Alat cepat 2×2 */
+.alat {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.alat a {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 16px;
+  border-radius: 18px;
+  background: var(--card);
+  color: var(--ink);
+  text-decoration: none;
+  border: 1.5px solid transparent;
+}
+
+.alat a:hover {
+  border-color: var(--primary);
+}
+
+.alat strong {
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.alat small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.ikonBiru,
+.ikonKuning {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  margin-bottom: 2px;
+}
+
+.ikonBiru {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.ikonKuning {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+/* Tahukah kamu? */
+.tahukah {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 22px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+.tahukah svg {
+  flex: none;
+}
+
+.tahukah > div {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.tahukah p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.tahukahBawah {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.tahukahBawah button {
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 0;
+  background: #1c2433;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Kartu fitur yang bisa digeser */
+.geser {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin: 0 -16px;
+  padding: 0 16px 8px;
+  scroll-padding: 0 16px;
+  scrollbar-width: thin;
+}
+
+.fitur {
+  flex: none;
+  width: min(264px, 72vw);
+  scroll-snap-align: start;
+  border-radius: 22px;
+  background: var(--card);
+  overflow: hidden;
+  padding-bottom: 16px;
+}
+
+.fiturGambar,
+.fiturGambarKuning {
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.fiturGambar {
+  background: var(--primary-soft);
+}
+
+.fiturGambarKuning {
+  background: var(--accent-soft);
+}
+
+.fiturGambar img,
+.fiturGambarKuning img {
+  width: 170px;
+  height: auto;
+  align-self: flex-start;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgb(28 36 51 / 0.18);
+}
+
+.fitur h3 {
+  margin: 0 16px 4px;
+  font-size: 16px;
+}
+
+.fitur p {
+  margin: 0 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.tautan {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  justify-self: start;
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Istilah hari ini + kuis */
+.duaKecil {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.istilahKecil,
+.kuis {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  padding: 16px;
+  border-radius: 18px;
+  text-decoration: none;
+}
+
+.istilahKecil {
+  background: var(--card);
+  color: var(--ink);
+}
+
+.istilahKecil .label {
+  color: var(--muted);
+}
+
+.istilahJp {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.istilahKecil em {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.kuis {
+  background: var(--deep);
+  color: #fff;
+}
+
+.kuis .label {
+  color: var(--accent);
+}
+
+.kuis strong {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.kuis small {
+  color: #c8cfdb;
+  font-size: 12px;
+}
+
+.kuisMulai {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* Privasi */
+.privasi {
+  display: grid;
+  gap: 14px;
+  padding: 22px 20px;
+  border-radius: 22px;
+  background: var(--deep);
+  color: #fff;
+}
+
+.privasiJudul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.privasiJudul > span {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #2f4a8a;
+  color: var(--accent);
+}
+
+.privasi h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.privasi ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  color: #dce1ea;
+}
+
+.privasi li {
+  display: flex;
+  gap: 10px;
+}
+
+.privasi li svg {
+  flex: none;
+  margin-top: 2px;
+  color: var(--accent);
+}
+
+.privasi a {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Dari pembuat */
+.pembuat {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px;
+  border-radius: 22px;
+  background: var(--card);
+}
+
+.pembuatIkon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+.pembuat > div {
+  display: grid;
+  gap: 6px;
+}
+
+.pembuat .label {
+  color: var(--muted);
+}
+
+.pembuat p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.pembuat a {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.semboyan {
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* Laptop: pembuka dua kolom, gajian di samping alat cepat */
+@media (min-width: 860px) {
+  .beranda {
+    gap: 40px;
+    padding-top: 48px;
+  }
+  .hero {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+  }
+  .tombolUtama,
+  .janji {
+    justify-self: start;
+  }
+  .janji {
+    width: 100%;
+    max-width: 440px;
+  }
+  .hp {
+    width: 270px;
+  }
+  .duaKolom {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+  }
+  .geser {
+    margin: 0;
+    padding: 0 0 8px;
+  }
+}
+
+@media (max-width: 859px) {
+  .duaKolom {
+    display: grid;
+    gap: 24px;
+  }
+}
