@@ -2,13 +2,79 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { situs } from "@/lib/situs";
 
-export const metadata: Metadata = {
-  title: "Coba YenRapi duluan",
-  description:
-    "YenRapi masih uji tertutup di Google Play. Gabung grup penguji, lalu pasang aplikasinya dari Play Store seperti biasa.",
-};
+export const metadata: Metadata = situs.playStore
+  ? {
+      title: "Pasang YenRapi",
+      description:
+        "YenRapi sudah ada di Google Play. Gratis, tanpa akun, dan datanya tersimpan di HP sendiri.",
+    }
+  : {
+      title: "Coba YenRapi duluan",
+      description:
+        "YenRapi masih uji tertutup di Google Play. Gabung grup penguji, lalu pasang aplikasinya dari Play Store seperti biasa.",
+    };
 
 export default function CobaPage() {
+  return situs.playStore ? <SudahTayang play={situs.playStore} /> : <UjiTertutup />;
+}
+
+/** Tampil setelah YenRapi tayang di Google Play. */
+function SudahTayang({ play }: { play: string }) {
+  return (
+    <div className="wrap page prose">
+      <h1>YenRapi sudah ada di Google Play 📱</h1>
+      <p>
+        Alhamdulillah, sekarang YenRapi bisa dipasang semua orang langsung dari{" "}
+        <strong>Play Store</strong>. Gratis, tanpa akun, dan catatanmu tersimpan
+        di HP sendiri.
+      </p>
+      <p className="muted">
+        Untuk sekarang baru HP <strong>Android</strong>. Versi iPhone belum ada.
+      </p>
+      <p>
+        <a className="btn btn-accent" href={play} rel="noopener">
+          Buka di Google Play
+        </a>
+      </p>
+
+      <h2>Sudah jadi penguji?</h2>
+      <ul>
+        <li>
+          Tidak perlu melakukan apa-apa. Aplikasimu tetap diperbarui otomatis dan{" "}
+          <strong>catatanmu tetap ada</strong>.
+        </li>
+        <li>
+          Terima kasih sudah mencoba lebih dulu. Masukan kalian banyak membantu
+          YenRapi sampai di titik ini.
+        </li>
+      </ul>
+
+      <h2>Yang perlu kamu tahu</h2>
+      <ul>
+        <li>
+          Foto slip gaji masih <strong>beta</strong>. Hasilnya selalu dicek
+          dulu sebelum disimpan.
+        </li>
+        <li>
+          Datamu hanya tersimpan di HP. Lihat{" "}
+          <Link href="/privasi">Kebijakan Privasi</Link>.
+        </li>
+      </ul>
+
+      <p>
+        Ada pertanyaan atau masukan? Kirim ke{" "}
+        <a href={`mailto:${situs.email}`}>{situs.email}</a> atau DM Instagram{" "}
+        <a href="https://www.instagram.com/yenrapi.app/" rel="noopener">
+          @yenrapi.app
+        </a>
+        .
+      </p>
+    </div>
+  );
+}
+
+/** Tampil selama YenRapi masih uji tertutup. */
+function UjiTertutup() {
   return (
     <div className="wrap page prose">
       <h1>Coba YenRapi duluan 📱</h1>

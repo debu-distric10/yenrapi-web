@@ -63,7 +63,92 @@ export const labelPerubahan: Record<JenisPerubahan, string> = {
 /** Waktu untuk versi yang masuk uji tertutup bersama 1.6.0. */
 const ujiNovember = "Uji tertutup sejak November 2026";
 
+/** Waktu untuk versi yang tayang di Google Play bersama 1.11.0. */
+const rilisPublik = "Tayang di Google Play, November 2026";
+
 export const versi: Versi[] = [
+  {
+    versi: "1.11.0",
+    nama: "Mulai dari sini",
+    status: "rilis",
+    waktu: rilisPublik,
+    judul: "Langsung tahu harus mulai dari mana",
+    ringkasan:
+      "Rilis pertama di Google Play. Langkah awal menyesuaikan kondisimu, foto slip gaji lebih akurat, dan menu Dana Talangan untuk yang berangkat lewat LPK.",
+    sorotan: ["Alur awal per kondisi", "Foto slip lebih akurat", "Dana Talangan LPK"],
+    folder: "1.11.0",
+    kelompok: [
+      {
+        ikon: "🧭",
+        judul: "Langkah awal baru",
+        ringkasan: "Pilih kondisimu dulu: masih di Indonesia, baru di Jepang, atau sudah lama di Jepang. Langkah berikutnya menyesuaikan.",
+        layar: [
+          { gambar: "layar-pembuka.webp", judul: "Layar pembuka", keterangan: "Mulai, coba dengan data contoh, atau pulihkan backup." },
+          { gambar: "kamu-di-mana.webp", judul: "Kamu sekarang di mana?", keterangan: "Tiga pilihan, bisa diganti nanti di Pengaturan." },
+          { gambar: "uangmu-ada-di-mana.webp", judul: "Uangmu ada di mana?", keterangan: "Centang tunai, bank, e-money, dan rekening Rupiah, lalu isi saldonya." },
+          { gambar: "mulai-dari-sini.webp", judul: "Mulai dari sini", keterangan: "Kartu langkah awal di Beranda sampai semuanya beres." },
+          { gambar: "beranda.webp", judul: "Beranda", keterangan: "Saldo, pulang berapa bulan lagi, dan dana talangan." },
+        ],
+      },
+      {
+        ikon: "📸",
+        judul: "Foto slip gaji (beta)",
+        ringkasan: "Angka slip terbaca lebih lengkap, ada panduan cara memfoto, dan hasilnya dicek bersama dalam bahasa Indonesia.",
+        layar: [
+          { gambar: "panduan-foto-slip.webp", judul: "Cara memfoto slip", keterangan: "Di meja, tempat terang, HP sejajar kertas." },
+        ],
+      },
+      {
+        ikon: "🏦",
+        judul: "Dana Talangan LPK",
+        ringkasan: "Sisa utang ke LPK, jadwal cicilan, pengingat, dan bayar langsung lewat Kiriman.",
+        layar: [
+          { gambar: "dana-talangan.webp", judul: "Dana Talangan", keterangan: "Sisa, cicilan berikutnya, dan rincian biaya." },
+        ],
+      },
+    ],
+  },
+  {
+    versi: "1.9.0",
+    nama: "Catat lebih cepat",
+    status: "rilis",
+    waktu: rilisPublik,
+    judul: "Catat pengeluaran dalam satu ketukan",
+    ringkasan:
+      "Widget di layar utama HP, kotak kategori yang paling sering dipakai, PIN untuk dokumen, sembunyikan saldo, simulasi tabungan, dan tombol ? di setiap halaman.",
+    sorotan: ["Widget layar utama", "PIN Dokumen", "Simulasi Tabungan"],
+    folder: "1.9.0",
+    kelompok: [
+      {
+        ikon: "⚡",
+        judul: "Catat lebih cepat",
+        ringkasan: "Sekali ketuk dari layar utama, keyboard angka langsung terbuka. Kategori yang sering dipakai muncul paling depan.",
+        layar: [
+          { gambar: "widget-dan-menu-ikon.webp", judul: "Widget & menu ikon", keterangan: "Ilustrasi. Tahan ikon YenRapi untuk pintasan." },
+          { gambar: "catat-kotak-kategori.webp", judul: "Kotak kategori", keterangan: "7 kategori yang paling sering kamu pakai." },
+          { gambar: "semua-kategori.webp", judul: "Semua kategori", keterangan: "Lewat kotak \"Lainnya\", bisa tambah kategori." },
+        ],
+      },
+      {
+        ikon: "🔒",
+        judul: "Dokumen aman & saldo tersembunyi",
+        ringkasan: "Dokumen penting dikunci PIN 4 angka. Saldo di Beranda bisa disembunyikan dengan tombol mata.",
+        layar: [
+          { gambar: "pin-dokumen.webp", judul: "PIN Dokumen", keterangan: "Lupa PIN? Buka dengan kunci HP." },
+          { gambar: "saldo-disembunyikan.webp", judul: "Saldo disembunyikan", keterangan: "Aman kalau HP dilihat orang lain." },
+        ],
+      },
+      {
+        ikon: "🐷",
+        judul: "Simulasi tabungan & panduan",
+        ringkasan: "Hitung hasil menabung rutin lalu jadikan target. Tombol ? menjelaskan setiap halaman.",
+        layar: [
+          { gambar: "simulasi-tabungan.webp", judul: "Simulasi Tabungan", keterangan: "Hasil akhir atau setoran per bulan." },
+          { gambar: "panduan-aplikasi.webp", judul: "Panduan aplikasi", keterangan: "Semua panduan di satu tempat." },
+        ],
+      },
+    ],
+  },
   {
     versi: "1.6.0",
     nama: "Rencana Pulang & Usaha",
@@ -375,24 +460,22 @@ export const rencana: LajurRencana[] = [
     ikon: "🔨",
     judul: "Sedang dikerjakan",
     item: [
-      { judul: "Rilis publik di Google Play", isi: "Uji tertutup bersama penguji sebelum bisa diunduh semua orang." },
+      { judul: "Kamera foto slip", isi: "Bingkai di dalam kamera supaya seluruh tabel slip masuk dan angkanya terbaca lengkap." },
     ],
   },
   {
     ikon: "⏭️",
     judul: "Berikutnya",
     item: [
-      { judul: "Catat lebih cepat", isi: "Widget \"+ Catat pengeluaran\" di layar utama dan kotak kategori yang paling sering dipakai." },
-      { judul: "PIN Dokumen & sembunyikan saldo", isi: "Dokumen penting dikunci PIN, saldo di Beranda bisa disembunyikan." },
-      { judul: "Simulasi tabungan", isi: "Hitung hasil menabung rutin, lalu jadikan target." },
-      { judul: "Panduan di setiap halaman", isi: "Tombol ? untuk penjelasan langsung di tempat." },
+      { judul: "Banyak profil", isi: "Satu HP untuk beberapa catatan terpisah." },
+      { judul: "Backup versi baru", isi: "Pindah HP dan memulihkan data jadi lebih mudah." },
+      { judul: "Beranda baru", isi: "Ringkasan yang lebih jelas sejak dibuka." },
     ],
   },
   {
     ikon: "💭",
     judul: "Nanti",
     item: [
-      { judul: "Sinkronisasi cloud (opsional)", isi: "Terenkripsi di HP sebelum dikirim; tanpa login tetap bisa dipakai penuh." },
       { judul: "Versi iPhone", isi: "Setelah versi Android stabil." },
     ],
   },

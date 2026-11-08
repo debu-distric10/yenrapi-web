@@ -14,8 +14,8 @@ const daftar: { href: string; ikon: NamaIkon; judul: string; isi: string }[] = [
   {
     href: "/coba",
     ikon: "hp",
-    judul: "Coba aplikasinya",
-    isi: "Ikut uji tertutup di Android",
+    judul: situs.playStore ? "Pasang aplikasinya" : "Coba aplikasinya",
+    isi: situs.playStore ? "Gratis di Google Play, Android" : "Ikut uji tertutup di Android",
   },
   {
     href: "/perjalanan",

@@ -60,7 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               className="top-coba"
               href={situs.playStore ?? "/coba"}
             >
-              Coba app
+              {situs.playStore ? "Pasang app" : "Coba app"}
             </Link>
           </div>
         </header>

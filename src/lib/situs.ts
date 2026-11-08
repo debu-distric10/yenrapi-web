@@ -4,7 +4,10 @@ export const situs = {
   slogan: "Keuangan rapi untuk orang Indonesia di Jepang",
   email: "yenrapi.app@gmail.com",
   /** Diisi setelah aplikasi tayang di Google Play. */
-  playStore: null as string | null,
+  playStore:
+    "https://play.google.com/store/apps/details?id=com.yenrapi.app" as
+      | string
+      | null,
   /** Uji tertutup: gabung grup dulu, lalu daftar jadi penguji di Play. */
   ujiCoba: {
     grup: "https://groups.google.com/g/yenrapi",
