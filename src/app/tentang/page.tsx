@@ -58,8 +58,9 @@ export default function TentangPage() {
           <h2>Yang bisa kamu periksa sendiri</h2>
           <ul>
             <li>
-              Aplikasinya <strong>tidak meminta izin internet</strong>. Ini bisa dicek di halaman
-              izin aplikasi di Google Play atau di pengaturan HP.
+              Internet di aplikasi <strong>hanya untuk mengambil kurs</strong> ¥ → Rp, tanpa membawa
+              data keuanganmu, dan bisa dimatikan di Pengaturan → Kurs otomatis. Izinnya bisa dicek di
+              halaman aplikasi di Google Play atau di pengaturan HP.
             </li>
             <li>
               Semua hitungan kalkulator dilakukan di HP (atau di browser untuk versi website),

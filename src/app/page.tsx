@@ -196,7 +196,7 @@ export default function BerandaPage() {
           </li>
           <li>
             <Ikon nama="centang" ukuran={18} tebal={2.6} />
-            Aplikasi tidak meminta izin internet.
+            Internet hanya untuk kurs ¥ → Rp, bisa dimatikan.
           </li>
           <li>
             <Ikon nama="centang" ukuran={18} tebal={2.6} />
