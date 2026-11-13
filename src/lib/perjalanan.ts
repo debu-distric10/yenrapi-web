@@ -68,6 +68,47 @@ const rilisPublik = "Tayang di Google Play, November 2026";
 
 export const versi: Versi[] = [
   {
+    versi: "2.0.0",
+    nama: "Wajah baru",
+    status: "segera",
+    waktu: "Segera di Google Play, November 2026",
+    judul: "Tampilan baru, lebih rapi dan enak dilihat",
+    ringkasan:
+      "Semua menu didesain ulang dengan animasi halus dan mode gelap yang lebih rapi. Beranda menyapa dengan namamu, kartu akun bisa dihias, dan laporan bisa disimpan sebagai PDF atau Excel. Kurs ¥ → Rp kini otomatis: internet hanya dipakai untuk kurs dan bisa dimatikan.",
+    sorotan: ["Desain baru semua menu", "Kartu akun bergaya", "Laporan PDF & Excel"],
+    folder: "2.0.0",
+    kelompok: [
+      {
+        ikon: "✨",
+        judul: "Desain baru di semua menu",
+        ringkasan: "Beranda menyapa dengan namamu, ada tombol cepat Keluar, Masuk, Scan slip, dan Kirim, dan grafiknya lebih mudah dibaca.",
+        layar: [
+          { gambar: "beranda.webp", judul: "Beranda", keterangan: "Sapaan, kartu akun, total saldo, dan tombol cepat." },
+          { gambar: "keuangan-statistik.webp", judul: "Keuangan", keterangan: "Pengeluaran per kategori dan rasio menabung." },
+          { gambar: "slip-gaji.webp", judul: "Slip gaji", keterangan: "Istilah Jepang beserta artinya, sampai 手取り." },
+          { gambar: "kiriman-ke-indonesia.webp", judul: "Kiriman ke Indonesia", keterangan: "Kurs dan biaya setiap kiriman." },
+          { gambar: "rencana-pulang.webp", judul: "Rencana Pulang", keterangan: "Perkiraan uang saat pulang, termasuk 脱退一時金." },
+        ],
+      },
+      {
+        ikon: "💳",
+        judul: "Kartu akun sesukamu",
+        ringkasan: "Pakai warna bank, pilih warna sendiri, gambar bawaan, atau fotomu. Foto disimpan terenkripsi dan ikut backup.",
+        layar: [
+          { gambar: "tampilan-kartu.webp", judul: "Tampilan kartu", keterangan: "Senja, Laut, Sakura, Hutan, atau foto sendiri." },
+        ],
+      },
+      {
+        ikon: "📄",
+        judul: "Laporan PDF & Excel",
+        ringkasan: "Laporan A4 siap cetak atau file Excel lengkap dengan grafik, enak dibagikan ke keluarga.",
+        layar: [
+          { gambar: "ekspor-pdf-excel.webp", judul: "Ekspor", keterangan: "Pilih periode dan isi laporannya." },
+        ],
+      },
+    ],
+  },
+  {
     versi: "1.11.0",
     nama: "Mulai dari sini",
     status: "rilis",
@@ -469,7 +510,6 @@ export const rencana: LajurRencana[] = [
     item: [
       { judul: "Banyak profil", isi: "Satu HP untuk beberapa catatan terpisah." },
       { judul: "Backup versi baru", isi: "Pindah HP dan memulihkan data jadi lebih mudah." },
-      { judul: "Beranda baru", isi: "Ringkasan yang lebih jelas sejak dibuka." },
     ],
   },
   {
