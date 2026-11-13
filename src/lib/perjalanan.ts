@@ -70,8 +70,8 @@ export const versi: Versi[] = [
   {
     versi: "2.0.0",
     nama: "Wajah baru",
-    status: "segera",
-    waktu: "Segera di Google Play, November 2026",
+    status: "rilis",
+    waktu: "Tayang di Google Play, 13 November 2026",
     judul: "Tampilan baru, lebih rapi dan enak dilihat",
     ringkasan:
       "Semua menu didesain ulang dengan animasi halus dan mode gelap yang lebih rapi. Beranda menyapa dengan namamu, kartu akun bisa dihias, dan laporan bisa disimpan sebagai PDF atau Excel. Kurs ¥ → Rp kini otomatis: internet hanya dipakai untuk kurs dan bisa dimatikan.",
