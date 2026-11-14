@@ -25,8 +25,8 @@ export default function TentangPage() {
           <h2>Siapa yang membuat</h2>
           <p>
             YenRapi dibuat oleh satu orang pekerja Indonesia yang sudah lebih dari dua tahun
-            bekerja di Jepang. Aplikasi ini lahir dari masalah yang dialami sendiri: gaji dalam
-            Yen, keluarga di Rupiah, dan slip gaji yang penuh huruf Jepang.
+            bekerja di Jepang. Aplikasi ini lahir dari masalah yang dialami sendiri: bekerja jauh dari
+            keluarga, bingung uang pergi ke mana, dan slip gaji yang penuh huruf Jepang.
           </p>
 
           <h2>Apa peran AI</h2>

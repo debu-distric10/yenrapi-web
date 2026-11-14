@@ -77,7 +77,7 @@ export default function BerandaPage() {
             {situs.playStore ? "Android · Gratis" : "Uji tertutup · Android"}
           </span>
           <h1>
-            Gaji dalam Yen, keluarga dalam Rupiah.{" "}
+            Kerja jauh dari rumah, niatnya untuk keluarga.{" "}
             <span>Catatannya rapi di satu HP.</span>
           </h1>
           <p className={styles.lead}>

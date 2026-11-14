@@ -408,7 +408,7 @@ export const versi: Versi[] = [
     nama: "Rilis pertama",
     status: "uji",
     waktu: "Uji tertutup sejak 23 Oktober 2026",
-    judul: "Gaji dalam Yen, keluarga di Indonesia — rapi di satu aplikasi",
+    judul: "Kerja jauh dari rumah, catatannya rapi di satu aplikasi",
     ringkasan:
       "Pencatatan keuangan lengkap untuk pekerja Indonesia di Jepang. Gratis, tanpa iklan, tanpa akun, dan tanpa internet.",
     sorotan: ["9 modul keuangan", "7 kalkulator", "43 istilah Jepang", "0 iklan"],

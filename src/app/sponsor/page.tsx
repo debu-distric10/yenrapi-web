@@ -25,7 +25,7 @@ export default function SponsorPage() {
       <h2>Siapa pembacanya</h2>
       <ul>
         <li>Pekerja Indonesia di Jepang: 技能実習, 特定技能, pekerja pabrik, perawat, dan pelajar yang bekerja paruh waktu.</li>
-        <li>Mengurus gaji dalam Yen dan mengirim uang rutin ke keluarga dalam Rupiah.</li>
+        <li>Mengurus gaji dan mengirim uang rutin ke keluarga di Indonesia.</li>
         <li>Mencari jawaban soal potongan gaji, pajak, nenkin, dan persiapan pulang.</li>
       </ul>
       <p className="muted">
