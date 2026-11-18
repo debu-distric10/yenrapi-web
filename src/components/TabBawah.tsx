@@ -16,6 +16,7 @@ export const menuUtama: { href: string; label: string; ikon: NamaIkon }[] = [
 /** Halaman yang masuk tab "Lainnya". */
 const bagianLainnya = [
   "/lainnya",
+  "/pakai",
   "/perjalanan",
   "/dukung",
   "/sponsor",

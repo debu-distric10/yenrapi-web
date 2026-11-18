@@ -68,6 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <footer className="foot">
           <div className="wrap foot-inner">
             <span>© 2026 {situs.nama} · Pelan-pelan, yang penting rapi.</span>
+            <Link href="/pakai">Cara Pakai</Link>
             <Link href="/perjalanan">Perjalanan</Link>
             <Link href="/dukung">Dukung</Link>
             <Link href="/privasi">Kebijakan Privasi</Link>

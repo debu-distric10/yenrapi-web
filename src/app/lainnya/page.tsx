@@ -18,6 +18,12 @@ const daftar: { href: string; ikon: NamaIkon; judul: string; isi: string }[] = [
     isi: situs.playStore ? "Gratis di Google Play, Android" : "Ikut uji tertutup di Android",
   },
   {
+    href: "/pakai",
+    ikon: "buku",
+    judul: "Cara pakai",
+    isi: "Langkah singkat memakai aplikasi",
+  },
+  {
     href: "/perjalanan",
     ikon: "grafik",
     judul: "Perjalanan aplikasi",
